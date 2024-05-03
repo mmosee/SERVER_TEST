@@ -1,8 +1,13 @@
 const express = require('express');
 const path = require('path');
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
 const app = express();
 const port = 8800;
+
+app.use(bodyParser.json());
+app.use(cors());
 
 // index.html 파일을 제공합니다.
 app.get('/', (req, res) => {
