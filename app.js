@@ -13,6 +13,8 @@ app.get('/', (req, res) => {
 // GET TEST
 app.get('/input', function(req, res) {
     console.log('TEST GET - input');
+
+    console.log(' req.body', JSON.stringify(req.body));
     
     return res.status(200).json({});
 });
