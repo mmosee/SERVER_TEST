@@ -20,9 +20,10 @@ app.get('/input', function(req, res) {
     console.log('TEST GET - input');
 
     console.log(' req.body', JSON.stringify(req.body));
+    console.log(' req.headers', JSON.stringify(req.headers));
 
     console.log('TEST - parameter, header')
-    const paramValue1 = req.query.test;
+    const paramValue1 = req.query.param1;
     const userId = req.headers.userId;
     console.log(paramValue1, userId);
     
