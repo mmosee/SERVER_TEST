@@ -21,11 +21,12 @@ app.get('/input', function(req, res) {
 
     console.log(' req.body', JSON.stringify(req.body));
     console.log(' req.headers', JSON.stringify(req.headers));
+    const testHeader = req.headers.find(arg => arg.userId);
 
     console.log('TEST - parameter, header')
     const paramValue1 = req.query.param1;
     const userId = req.headers.userId;
-    console.log(paramValue1, userId);
+    console.log(paramValue1, testHeader);
     
     return res.status(200).json({});
 });
